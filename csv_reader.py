@@ -21,7 +21,30 @@ def ModifyDate():
             print(e)
     return Data
 
-Data = ModifyDate()
+def ModifySubdiv():
+    Data = ModifyDate()
+    Subs = [] # subdivisions
+    for sub in pycountry.subdivisions:
+        Subs.append(sub)
 
-# germany = pycountry.countries.get(name='Mandiana')
-# print(germany)
+    ShortSubs = [] # auxiliary list to check unknown subdivisions
+    for x in Subs:
+        ShortSubs.append(x.country.alpha_3)
+        for y in Data:
+            DataSub = y[1] # subdivision from Data list
+            if x.name == DataSub:
+                y[1] = x.country.alpha_3 # alpha_3 returns subdivision name
+            else:
+                continue
+
+    for x in Data:
+        if x[1] in ShortSubs:
+            continue
+        else:
+            x[1] = "XXX" # replace unknown subdivisions to XXX
+    return Data
+
+Data = ModifySubdiv()
+for x in Data:
+    print(x)
+
