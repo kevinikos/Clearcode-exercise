@@ -47,8 +47,14 @@ def ModifySubdiv():
 def ModifyCTR():
     Data = ModifySubdiv()
     for x in Data:
-        CTR = x[3][:-1] # remove % symbol
+        CTR = x[3][:-1] # remove '%' symbol
         x[3] = int(float(CTR)*10) # changed string to float, and finally float to integer
     return Data
 
-print(ModifyCTR())
+def SortData():
+    Data = ModifyCTR()
+    Data.sort(key=lambda x: x[0]) # sort by first element of list which is DATE
+    for row in Data:
+        print(row)
+
+SortData()
