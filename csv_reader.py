@@ -44,7 +44,11 @@ def ModifySubdiv():
             x[1] = "XXX" # replace unknown subdivisions to XXX
     return Data
 
-Data = ModifySubdiv()
-for x in Data:
-    print(x)
+def ModifyCTR():
+    Data = ModifySubdiv()
+    for x in Data:
+        CTR = x[3][:-1] # remove % symbol
+        x[3] = int(float(CTR)*10) # changed string to float, and finally float to integer
+    return Data
 
+print(ModifyCTR())
