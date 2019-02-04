@@ -11,7 +11,7 @@ In order to proper operation location of .csv file must be the same as csv_reade
 * Data - *list of stored data from csv file*
 * DateFormat - *changed format of datetime*
 * Subs - *list of subdivisions taken from pycountry library*
-* ShortSubs - *list of three letter country code taken from pycountry library*
+* ShortSubs - *list of three letter country codes taken from pycountry library*
 * CTR - *number of clicks changed from string to integer (multiplied by 10)*
 
 ### Exceptions
