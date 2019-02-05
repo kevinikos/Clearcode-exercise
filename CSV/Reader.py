@@ -4,7 +4,7 @@ import csv
 
 def ReadFile():
     try:
-        filename = 'clearcode-csv.csv'
+        filename = 'Example.csv'
         with open(filename, encoding="utf-8-sig") as csvfile:
             readCSV = csv.reader(csvfile, delimiter=';')
             Data = []
