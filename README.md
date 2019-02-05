@@ -28,9 +28,11 @@ Run your local server with RunServer.py and go to Request.py.
 * links - *list of links stored in dictionary*
 * data - *title and links stored in dictionary*
 * page - *request to the page using urllib*  
-* extract - *replace 0.0.0.0:8000 to 127.0.0.1
+* extract - *replace 0.0.0.0:8000 to 127.0.0.1*
 
 ### Libraries
 * BeautifulSoup - *package for parsing HTML*
 * urllib - *module for fetching URLs*
 * json - *encoding*
+
+Unfortunately you have to fill *urls* list with all available urls.
