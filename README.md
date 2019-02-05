@@ -15,8 +15,9 @@ In order to proper operation location of .csv file must be the same as csv_reade
 * CTR - *number of clicks changed from string to integer (multiplied by 10)*
 
 ### Exceptions
-*
-*
+* FileNotFoundError .csv file does not exit or it is located in another directory
+* ValueError incompatible date format month/day/year
+* '%' symbol exist verification in CTR column
 
 # Web Crawler 
-
+You can run server with RunServer.py
