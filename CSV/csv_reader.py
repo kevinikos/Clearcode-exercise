@@ -3,13 +3,18 @@ import pycountry
 import csv
 
 def ReadFile():
-    filename = 'clearcode-csv.csv'
-    with open(filename, encoding="utf8") as csvfile:
-        readCSV = csv.reader(csvfile, delimiter=';')
+    try:
+        filename = 'clearcode-csv.csv'
+        with open(filename, encoding="utf-8-sig") as csvfile:
+            readCSV = csv.reader(csvfile, delimiter=';')
+            Data = []
+            for row in readCSV:
+                Data.append(row[0:])
+        return Data
+    except FileNotFoundError as e:
+        print(e)
         Data = []
-        for row in readCSV:
-            Data.append(row[0:])
-    return Data
+        return Data
 
 def ModifyDate():
     Data = ReadFile()
@@ -47,8 +52,11 @@ def ModifySubdiv():
 def ModifyCTR():
     Data = ModifySubdiv()
     for x in Data:
-        CTR = x[3][:-1] # remove '%' symbol
-        x[3] = int(float(CTR)*10) # changed string to float, and finally float to integer
+        if x[3].endswith("%"): # remove '%' symbol if exist
+            CTR = x[3][:-1]
+            x[3] = int(float(CTR)*10) # changed string to float, and finally float to integer
+        else:
+            x[3] = int(float(x[3])*10)
     return Data
 
 def SortData():
