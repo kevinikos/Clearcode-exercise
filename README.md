@@ -20,5 +20,17 @@ In order to avoid problems the location of .csv file must be the same as Reader.
 * '%' symbol exist verification in CTR column
 
 # Web Crawler 
-Run your local server with RunServer.py and go to Request.py
+Run your local server with RunServer.py and go to Request.py. 
 
+### Variables/Lists/Dictionaries
+* urls - *list of websites*
+* title - *list of titles stored in dictionary (only one so it should be variable)*
+* links - *list of links stored in dictionary*
+* data - *title and links stored in dictionary*
+* page - *request to the page using urllib*  
+* extract - *replace 0.0.0.0:8000 to 127.0.0.1
+
+### Libraries
+* BeautifulSoup - *package for parsing HTML*
+* urllib - *module for fetching URLs*
+* json - *encoding*
