@@ -1,10 +1,10 @@
 # Description
 In response to challenge given by Clearcode I have created two files with solutions of each exercise
-* CSV/csv_reader.py
-* WEB/WebCrawler.py
+* CSV/Reader.py
+* WEB/Requests.py
 
 # CSV Report Processing
-In order to proper operation location of .csv file must be the same as csv_reader.py
+In order to avoid problems the location of .csv file must be the same as Reader.py
 
 ### Variables/Lists
 * filename - *name of .csv file (input)*
@@ -20,4 +20,5 @@ In order to proper operation location of .csv file must be the same as csv_reade
 * '%' symbol exist verification in CTR column
 
 # Web Crawler 
-You can run server with RunServer.py
+Run your local server with RunServer.py and go to Request.py
+
